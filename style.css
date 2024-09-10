@@ -1,0 +1,322 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;/* Sets the default font */
+    background-color: white; /* Sets the overall background to white */
+    color: black; /* Sets the text color to black */
+    overflow: hidden;
+    font-family: "Poppins", sans-serif
+  
+}
+
+/* Header Styling */
+header {
+    background-color:transparent; /* Background of the header is white */
+    padding:10px 20px ; /* Adds padding around the header */
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between 
+}
+/* Logo */
+.logo{
+    flex: 1;
+    z-index: 11;
+
+}
+.logo img {
+    width: 100px; /* Sets the width of the logo */
+
+}
+
+/*navbar */
+.navbar {
+   flex: 2; /* Spreads out the items in the navbar */
+}
+
+.nav-list {
+    list-style-type: none; /* Removes bullet points from list */
+    margin: 0;
+    font-size: 22px;
+    padding: 0;
+    justify-content: flex-start;
+    display: flex; /* Aligns list items horizontally */
+    gap: 30px; /* Adds space between nav items */
+}
+
+.nav-list li a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Sets the link color to black */
+    font-weight: 600; /* Makes the text bold */
+    transition: border-bottom .3s ease-in-out;
+}
+.nav-list li a:hover{
+    color: #696969;
+    border-bottom: #696969 solid;
+}
+.shop-search{
+    display: flex;
+    align-items: center;
+    flex: 1.5;
+    z-index: 11;
+}
+
+/* Shopping Icon and Search Bar */
+.shop-search img{
+    width: 50px;
+    margin-right: 15px;
+    transition: translateX .3s ease-in-out;
+}
+.shop-search img:hover{
+   transform: translateX(360deg);
+}
+.search-bar {
+    display: flex;
+    background: #fff;
+    align-items: center; 
+    padding: 5px 25px; /* Adds padding inside the container */
+    border-radius: 40px; /* Rounds the corners of the container */
+    box-shadow: 0px 3px 5px rgb(0, 0, 0 , .3) inset;
+    transition: background .3s ease-in-out;
+}
+.search-bar:hover{
+    background: rgb(0, 0, 0 , .3);
+}
+.search-bar input {
+    background: transparent;
+    border: none; /* Removes the border of the input field */
+    outline: none; /* Removes the outline when focused */
+    padding: 10px; /* Adds padding inside the input field */
+}
+.search-bar i{
+    order: 2;
+    font-size: 30px;
+    color: #3b3a3ad2;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Initially hides the hamburger menu */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    order: 2;
+    font-size: 50px;
+    position: relative;
+    bottom: 6px;
+    z-index: 11;
+    transition: all .3s ease-in;
+}
+.hamburger:hover{
+    background:#2727270a ;
+}
+.container{
+    background: #d9d9d9;
+    width: 35vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    
+}
+/* Hero Section  */
+.hero {
+    display: flex; /* Aligns hero text and image side by side */
+    justify-content: space-evenly; /* Space between text and image */
+    padding: 50px 20px 0 20px; /* Padding around the hero section */
+    background-color: white; /* White background for the hero section */
+    height: 70vh; /* Sets the height of the hero section */
+    align-items: center;
+}
+
+.hero-text {
+    position: relative;
+    bottom: 50px;
+    z-index: 1;
+}
+.hero-text h3 {
+    font-size: 30px; /* Font size for the subheading */
+    margin: 0;
+    font-weight: 600;
+    
+}
+
+.hero-text h1 {
+    font-size: 80px; /* Font size for the main heading */
+    margin: 5px 0;
+    font-weight: 800;
+}
+
+.hero-text button {
+    padding: 20px 40px; /* Adds padding inside the button */
+    background-color: black; /* Black background for the button */
+    color: white; /* White text for the button */
+    border-radius: 40px; /* Rounds the corners of the button */
+    border: none; /* Removes the border */
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background , ease-in-out .3s;
+}
+.hero-text button:hover{
+    background: transparent;
+    color: black;
+    box-shadow: 0 3px 5px rgb(0, 0, 0 , .3) inset;
+}
+
+.hero-img img {
+    position: relative;
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+    z-index: 1;
+}
+
+/* Social Media Section for Small Screens */
+.social-container {
+    display: none; /* Hidden on larger screens */
+    align-items: center; /* Centers icons horizontally */
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    bottom: 180px;
+    z-index: 222;
+}
+.social-container h3{
+    font-size: 30px;
+}
+
+.social-icons a i {
+    color: black;
+    font-size: 30px; /* Size of the social media icons */
+    transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+.social-icons a i:hover {
+    transform: scale(1.2); /* Scales up the icon on hover */
+}
+@media (max-width: 920px){
+    .shop-search img{
+        display: none;
+    }
+    .navbar{
+        flex: 3;
+    }
+    .hero-text h1{
+        font-size: 70px;
+    }
+}
+/* Responsive Styling */
+@media (max-width: 760px) {
+    header{
+        padding: 20px;
+    }
+    .shop-search img, .shop-search{
+        display: none;
+    }
+
+    .hamburger {
+        display: block; /* Display hamburger on small screens */
+        
+    }
+    
+    .navbar{
+        display: none;    
+    }
+    .navbar.active{
+       position: fixed;
+       top: 0;
+       right: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(204, 204, 204, 0.068);
+       backdrop-filter: blur(20px);
+       z-index: 10;
+       display: flex;
+       justify-content: center;
+       padding-top: 80px;
+       animation: slidiIn .3s ease-out;
+    }
+    .nav-list{
+        flex-direction: column;
+        
+    }
+    .nav-list li a {
+        margin: 10px auto;
+    
+    }
+    .shop-search.active {
+        display: block; /* Displays the search bar below the hamburger */
+        position: absolute; /* Centers the search bar */
+        top: 50%;
+        margin-left: 30vw;
+        padding: 0; /* Adds padding inside the search bar */
+        opacity: 1;
+        z-index: 111;
+        border-radius: 50px;
+        background: #fff;
+    }
+    .search-bar{
+        box-shadow: 3px 6px 10px rgb(0, 0, 0 , .3) inset;
+    }
+    .search-bar input{
+        font-weight: 500; 
+    }
+    .container{
+        width: 100vw;
+        height: 35vh;   
+    }
+    .hero {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center-align text on small screens */
+        padding-top: 20px;
+    }
+    .hero-text{
+        bottom: 0;
+      }
+    .hero-text h1{
+        font-size: 60px;
+    }
+    .hero-text button {
+        margin-top: 20px; /* Adds margin above the button */
+    }
+    .hero-img img{
+        width: 80%;
+        transform: rotate(345deg);
+    }
+    .social-container.active {
+        display: flex;
+        opacity: 1;
+        }
+}
+
+@media (max-width: 480px) {
+    .shop-search.active{
+        margin-left: 15vw;
+
+    }
+    
+    .hero-text h3{
+        font-size: 24px;
+    }
+    .hero-text h1{
+        font-size: 48px
+    }
+
+    .hero {
+        height: auto; /* Adjust height for smaller screens */
+    }
+    .hero-img img{
+        width: 100%;
+    }
+    .social-container{
+        bottom: 220px;
+    }
+}
+@media (max-width: 380px) {
+    .shop-search.active {
+        margin-left: 0;
+    }
+    .social-container{
+        bottom: 180px;
+    }
+}
